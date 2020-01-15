@@ -55,3 +55,5 @@ Route::get('/teacher/{index}',function($index){
     Route::get('join','PagesController@join');
     Route::get('news','PagesController@news');
     Route::get('contact','PagesController@contact');
+    // Route::get('showCustomer', 'PagesController@showCustomer');
+    Route::get('listCustomer', 'PagesController@listCustomer');
