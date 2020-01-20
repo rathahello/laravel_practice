@@ -6,11 +6,26 @@
     @else
        No Customer Yet
     @endif --}}
+
+
         {{$page}}
-    @if ($customers1 )
-        @foreach ($customers1 as $element)
-            {{$element}}
-        @endforeach
-    @else
-    No Customer Yet
-    @endif
+        <br>  
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+                @foreach ($customers as $element)
+            <tbody>
+                <tr>
+                    <td> {{$element['id']}}</td>
+                    <td> {{$element['name']}}</td>
+                    <td> {{$element['email']}}</td>
+                </tr>
+            </tbody>
+                @endforeach
+        </table>

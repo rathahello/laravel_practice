@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PagesController extends Controller
 {
     public function action(){
@@ -26,20 +24,21 @@ class PagesController extends Controller
         $contact = "Contact Us";
         return view("pages.contact",['contact_us' => $contact]);
     }
-    // public function showCustomer(){
-    //     $customers = array('Chandaraty','Maly','Samphas','Donat');
-    //     return view('customer', compact('customers'));
-    // }
+    
     public function listCustomer(){
         $page = "This is customer list page";
-        $customers1 = array(
-            array('id' => 1,'name' => 'Chandaraty','email' => 'chandaraty@example.org'),
-        array('id' => 2,'name' => 'Maly','email' => 'maly@example.org')
-    );
-        // $customers2 = array('1'=>array('id' => 2,'name' => 'Maly','email' => 'maly@example.org'),);
-        // $customers3 = array('2'=>array('id' => 3,'name' => 'Samphas','email' =>'samphas@example.org'),);
-        // $customers4 = array('3'=>array('id' => 4,'name' => 'Donat','email' => 'donat@example.org'),);
+        $customers = array(
+
+        '0'=>array('id' => 1,'name' => 'Chandaraty','email' => 'chandaraty@example.org'),
         
-            return view('customer',compact('customers1','page'));
+        '1'=>array('id' => 2,'name' => 'Maly','email' => 'maly@example.org'),
+        
+        '2'=>array('id' => 3,'name' => 'Samphas','email' =>'samphas@example.org'),
+        
+        '3'=>array('id' => 4,'name' => 'Donat','email' => 'donat@example.org')
+        
+        );
+
+            return view('customer',compact('customers','page'));
     }
 }

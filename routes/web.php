@@ -1,5 +1,8 @@
 <?php
 
+// use Symfony\Component\Routing\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,4 +59,5 @@ Route::get('/teacher/{index}',function($index){
     Route::get('news','PagesController@news');
     Route::get('contact','PagesController@contact');
     // Route::get('showCustomer', 'PagesController@showCustomer');
-    Route::get('listCustomer', 'PagesController@listCustomer');
+    Route::get('customer', 'PagesController@listCustomer');
+    
